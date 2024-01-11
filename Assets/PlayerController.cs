@@ -10,20 +10,9 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 10.0f;
     public float maxJumpForce = 10.0f;
     // Start is called before the first frame update
-
-
-    Animator anim;
-
-    void Axake()
-    {
-        
-    }
-
-
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        anim = GetComponentInChildren<Animator>();
     }
     void OnCollisionEnter(Collision collision) //충돌 감지
     {
@@ -65,10 +54,5 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(direction * jumpForce, ForceMode.VelocityChange);
             jumpForce = 0.0f;
         }
-        anim.SetBool("IsRun", dir != Vector3.zero );
-        anim.SetBool("isJumping", isJumping);
     }
-
-    
-
 }
