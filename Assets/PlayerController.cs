@@ -14,11 +14,6 @@ public class PlayerController : MonoBehaviour
 
     Animator anim;
 
-    void Axake()
-    {
-        
-    }
-
 
     void Start()
     {
@@ -66,7 +61,7 @@ public class PlayerController : MonoBehaviour
             jumpForce = 0.0f;
         }
         anim.SetBool("IsRun", dir != Vector3.zero );
-        anim.SetBool("isJumping", isJumping);
+        anim.SetBool("IsJump", isJumping);
     }
 
     
